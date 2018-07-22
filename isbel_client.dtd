@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!ELEMENT IsbelClientConfig ( General, SocketConfig ) >
+<!ELEMENT General ( InSpool, OutSpool, SpoolName, SpoolExtension ) >
+<!ELEMENT InSpool ( #PCDATA ) >
+<!ELEMENT OutSpool ( #PCDATA ) >
+<!ELEMENT SpoolName ( #PCDATA ) >
+<!ELEMENT SpoolExtension ( #PCDATA ) >
+<!ELEMENT SocketConfig ( DestinationAddress, SocketPort, SocketBuffer ) >
+<!ELEMENT DestinationAddress ( #PCDATA ) >
+<!ELEMENT SocketPort ( #PCDATA ) >
+<!ELEMENT SocketBuffer ( #PCDATA ) >

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT IsbelConfig (General, SocketConfig, AccessControl, LogConfig, DataFrames)>
+
+<!ELEMENT General (InPath, OutPath, FileName, FileExtension, DateFormat, InterfaceCommand)>
+<!ELEMENT InPath (#PCDATA)>
+<!ELEMENT OutPath (#PCDATA)>
+<!ELEMENT FileName (#PCDATA)>
+<!ELEMENT FileExtension (#PCDATA)>
+<!ELEMENT DateFormat (#PCDATA)>
+<!ELEMENT InterfaceCommand (#PCDATA)>
+
+
+<!ELEMENT SocketConfig (ListenAddress, SocketPort, SocketBuffer)>
+<!ELEMENT ListenAddress (#PCDATA)>
+<!ELEMENT SocketPort (#PCDATA)>
+<!ELEMENT SocketBuffer (#PCDATA)>
+
+<!ELEMENT AccessControl (Allow+)>
+<!ELEMENT Allow (#PCDATA)>
+
+<!ELEMENT LogConfig (LogPath, ErrLogName, OutLogName, LogDateFormat, LogFormat, LogSize, LogParts)>
+<!ELEMENT LogPath (#PCDATA)>
+<!ELEMENT ErrLogName (#PCDATA)>
+<!ELEMENT OutLogName (#PCDATA)>
+<!ELEMENT LogDateFormat (#PCDATA)>
+<!ELEMENT LogFormat (#PCDATA)>
+<!ELEMENT LogSize (#PCDATA)>
+<!ELEMENT LogParts (#PCDATA)>
+
+<!ELEMENT DataFrames (FieldSeparator, RecordSeparator)>
+<!ELEMENT FieldSeparator (#PCDATA)>
+<!ELEMENT RecordSeparator (#PCDATA)>

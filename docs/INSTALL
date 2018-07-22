@@ -1,0 +1,29 @@
+Descripcion de la instalacion:
+-----------------------------------------------------------------
+
+==============================
+Pasos a seguir:
+==============================
+
+- Copiar el archivo SocketDaemon.pyc en la carpeta /usr/local/bin, luego
+  darle permisos de ejecucion con chmod 755 /usr/local/bin/SocketDaemon.pyc
+  
+- Copiar los archivos siguientes a la carpeta /usr/lib/python2.6/site-packages:
+    * SocketService.pyc
+    * XmlConfigParser.pyc
+    * XmlValidateDTD.pyc
+    * daemon.pyc
+
+- Copiar los archivos de configuracion a la carpeta /etc:
+    * isbel.xml ==> El archivo de configuracion
+    * isbel.dtd ==> El validador de configuracion
+    
+==============================
+Comandos de ejecucion:
+==============================
+
+El comando SocketDaemon.pyc tiene las siguientes clausulas:
+  - start para iniciar el daemon
+  - stop para detener el daemon
+  - restart para reiniciar el daemon
+  - status para verificar el estado de ejecucion del daemon

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE IsbelConfig SYSTEM "isbel.dtd">
+<IsbelConfig>
+    <!-- Seccion de configuraciones generales -->
+    <General>
+        <!-- Carpeta de entrada de archivos -->
+        <InPath>/home/pos/entrada</InPath>
+       
+        <!-- Carpeta de salida de archivos -->
+        <OutPath>/home/pos/salida</OutPath>
+ 
+        <!-- Nombre base de archivos -->
+        <FileName>ISBEL</FileName>
+        
+        <!-- Extension de archivos -->
+        <FileExtension>.trx</FileExtension>
+        
+        <!-- Formato de fecha en archivos -->
+        <DateFormat>%y%m%d%H%M%S%f</DateFormat>
+        
+        <!-- Comando de interface que ejecutara la transaccion en megaflex -->
+        <InterfaceCommand>/usr/local/bin/runcobol.sh</InterfaceCommand>
+    </General>
+    
+    <!-- Seccion de configuraciones de socket -->
+    <SocketConfig>
+        <!-- Direccion de escucha del servidor socket -->
+        <ListenAddress>0.0.0.0</ListenAddress>
+        
+        <!-- Puerto del servidor socket -->
+        <SocketPort>2020</SocketPort>
+        
+        <!-- Buffer de transmision del socket -->
+        <SocketBuffer>1024</SocketBuffer>
+    </SocketConfig>
+    
+    <!-- Seccion de configuraciones de acceso -->
+    <AccessControl>
+        <!-- Listado de direcciones a permitir -->
+        <Allow>127.0.0.1</Allow>
+        <Allow>190.25.206.172</Allow>
+    </AccessControl>
+    
+    <!-- Seccion de configuraciones generales -->
+    <LogConfig>
+        <!-- Ruta de almacenamiento del log del integrador -->
+        <LogPath>/tmp</LogPath>
+        
+        <!-- Nombre del log de errores -->
+        <ErrLogName>SocketDaemon.err</ErrLogName>
+        
+        <!-- Nombre del log de salida y transacciones -->
+        <OutLogName>SocketDaemon.log</OutLogName>
+        
+        <!-- Formato de fechas del log -->
+        <LogDateFormat>%Y-%m-%d %H:%M:%S</LogDateFormat>
+        
+        <!-- Formato de generacion del log -->
+        <LogFormat>[%(asctime)s] %(name)s &lt;%(levelname)s&gt; %(message)s</LogFormat>
+        
+        <!-- Cantidad de kilobytes que tendra el log antes de dividirse -->
+        <LogSize>2048</LogSize>
+        
+        <!-- Cantidad de partes a conservar del log antes de eliminar el 
+             mas antiguo -->
+        <LogParts>10</LogParts>
+    </LogConfig>
+    
+    <!-- 
+    [::Seccion de configuraciones de tramas de datos::]
+     *Aviso:
+        Esta seccion no debe ser modificada a menos que sea bajo requerimiento
+        por parte del equipo de colombia y en conjunto con Jesus Sanchez.
+    -->
+    <DataFrames>
+        <!-- Definicion del separador de campos -->
+        <FieldSeparator>|</FieldSeparator>
+        <!-- Definicion del separador de registros -->
+        <RecordSeparator>@</RecordSeparator>
+    </DataFrames>
+</IsbelConfig>

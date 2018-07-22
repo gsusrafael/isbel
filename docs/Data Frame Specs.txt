@@ -1,0 +1,49 @@
+(t_t_trama, 1           Tipo trama
+ t_fecha_ticket, 8      Fecha de ticket (o transaccion)
+ t_grupo_banca, 6       Grupo banca
+ t_stan, 6              Identificador unico de trasaccion por terminal
+ t_count, 4             Contador de elementos que vienen en la transaccion
+ t_tid.rjust(8,'0'), 8  Identificador de terminal (Serial de equipo)
+ t_valor_ticket, 9      Valor total del ticket de transaccion
+ t_hora_ticket, 6       Hora en la que se realizo la transaccion
+ t_mtp, 4               Tipo de mensaje que se recibe del HASH
+ t_pc) 6                Codigo de procesamiento que el HASH envia para el tipo de transaccion
+ 
+ 
+(tipo_jugada, 1         Tipo de jugada
+ loteria, 2             Loteria de la jugada
+ valor_jugada, 7        Valor de la jugada
+ jugada1,               Primera jugada
+ jugada2,               Segunda jugada
+ jugada3)               Tercera jugada
+ 
+ 
+ 
+1|20110415f|004504g|000100s|0001|2A000673|000000001|133600h|0210m|000100p@
+017|005|0000800|52|56|--@
+1|20110415f|004504g|000100s|0001|2A000673|000000001|133600h|0210m|000100p
+
+Codigos de los conceptos para las jugadas de Haiti, los juegos deben tener este codigo.
+=======================================================================================
+Codloteria     : 005
+Secuencia      : 01
+Siglasloteria  : LOTH
+Quiniela Haiti : 016
+Pale Haiti     : 017
+Tripleta Haiti : 018
+Lotte 3        : 019
+Lotte 4        : 020
+Lotte 5        : 021
+
+
+Mensajes : 
+----------
+
+MySQL                                                   COBOL
+====================================================    ============================================================================
+"1000-3: Ventas cerradas."                              "2- Loteria cerrada."
+"1000-5: El limite para este juego ha sido excedido."   "3- Venta excedida"  (para un juego en especifico, no para esa terminal)
+"0201-6 EL TICKET DIGITADO NO EXISTE"                   "4- Numero de ticket no existe"  (si es para verificar un ticket, no ventas.)
+"No esta hecho esta validacion por el momento"          "5- Tiempo de anulacion caduco".
+"No esta hecho esta validacion por el momento"          "5- Este ticket ya esta anulado".
+"No esta hecho esta validacion por el momento"          "5- Este ticket ya esta anulado".

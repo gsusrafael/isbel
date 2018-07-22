@@ -1,0 +1,35 @@
+{
+  'AccessControl': {
+    'Allow': ['127.0.0.1', '190.146.133.157']
+  }, 
+  
+  'LogConfig': {
+    'LogFormat': 'None', 
+    'LogSize': '2048', 
+    'LogParts': '10', 
+    'LogDateFormat': '%Y-%m-%d %H:%M:%S',
+    'LogPath': '/tmp', 
+    'OutLogName': 'SocketService.log', 
+    'ErrLogName': 'SocketService.err'
+  },
+  
+  'DataFrames': {
+    'RecordSeparator': '@', 
+    'FieldSeparator': '|'
+  }, 
+  
+  'SocketConfig': {
+    'SocketBuffer': '1024',
+    'SocketPort': '2020', 
+    'ListenAddress': '0.0.0.0'
+  }, 
+  
+  'General': {
+    'InterfaceCommand': '/usr/local/bin/runcobol.sh',
+    'OutPath': '/home/pos/salida', 
+    'DateFormat': '%Y%m%d%H%M%S', 
+    'FileExtension': '.trx',
+    'InPath': '/home/pos/entrada',
+    'FileName': 'INTEGRATION'
+  }
+}

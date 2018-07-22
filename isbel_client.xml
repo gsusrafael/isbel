@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE IsbelClientConfig SYSTEM "isbel_client.dtd">
+<IsbelClientConfig>
+    <!-- Seccion de configuraciones generales -->
+    <General>
+        <!-- Cola de entrada -->
+        <InSpool>/home/cpos/entrada</InSpool>
+        
+        <!-- Cola de salida -->
+        <OutSpool>/home/cpos/salida</OutSpool>
+        
+        <!-- Nombre base de archivos -->
+        <SpoolName>ISBEL_CLIENT</SpoolName>
+        
+        <!-- Extension de archivos -->
+        <SpoolExtension>.trx</SpoolExtension>
+    </General>
+    
+    <!-- Seccion de configuraciones de socket -->
+    <SocketConfig>
+        <!-- Direccion de envio hacia servidor socket -->
+        
+        <DestinationAddress>sys000.dns2go.com</DestinationAddress>
+        <!--
+        <DestinationAddress>localhost</DestinationAddress>
+        -->
+        <!-- Puerto de envio servidor socket -->
+        <SocketPort>2020</SocketPort>
+        
+        <!-- Buffer de transmision del socket -->
+        <SocketBuffer>1024</SocketBuffer>
+    </SocketConfig>
+</IsbelClientConfig>
