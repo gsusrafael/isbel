@@ -1,9 +1,8 @@
 # ISBEL
 
-Descripcion de la instalacion:
+## Descripcion de la instalacion:
 -----------------------------------------------------------------
 
-==============================
 Pasos a seguir:
 ==============================
 
@@ -20,7 +19,6 @@ Pasos a seguir:
     * isbel.xml ==> El archivo de configuracion
     * isbel.dtd ==> El validador de configuracion
     
-==============================
 Comandos de ejecucion:
 ==============================
 
